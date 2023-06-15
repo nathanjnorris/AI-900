@@ -9,7 +9,7 @@ $env:ARM_CLIENT_ID="54ddb1a1-e405-4c5e-bb72-80c6b0e7f118"
 $env:ARM_CLIENT_SECRET="$(az keyvault secret show --name spTerraformToAzure --vault-name kv-terraform-svc --query value -o tsv)"
 $env:ARM_TENANT_ID="5e3c4ffb-78eb-48a1-abdd-94bb9d93cb21"
 $env:ARM_ACCOUNT_KEY="$(az keyvault secret show --name stterraformsvcAccountKey --vault-name kv-terraform-svc --query value -o tsv)"
-y
+
 terraform init -upgrade
 
 terraform plan -out main.tfplan
